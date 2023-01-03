@@ -2,7 +2,7 @@ package com.example.SpringbootAppEx;
 
 import java.util.Arrays;
 
-import org.junit.runners.model.RunnerScheduler;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
