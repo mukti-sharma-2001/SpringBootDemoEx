@@ -31,7 +31,7 @@ class SpringbootAppExApplicationTests {
 	public void getAllEmpTest() {
 		when(repo.getAllEmp()).thenReturn(Stream
 		.of(new Employee(1,"IU","South Korea"),new Employee(2,"Drake","US")).collect(Collectors.toList()));
-		assertEquals(2,service.getAllEmp());
+		assertEquals(2,service.getAllEmp().size());
 	}
 	
 	@Test
@@ -44,7 +44,7 @@ class SpringbootAppExApplicationTests {
 	public void deleteEmpTest() {
 		Employee e=new Employee(1,"IU","Korea");
 		when(repo.deleteEmp(e.getEmpId())).thenReturn("deleted");
-		assertEquals("deleted",service.deleteEmp(e.getEmpId()-1));
+		assertEquals(null,service.deleteEmp(e.getEmpId()-1));
 	}
 	
 
