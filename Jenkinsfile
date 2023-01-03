@@ -10,7 +10,7 @@ pipeline {
         stage('Clean') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mukti-sharma-2001/SpringBootDemoEx.git'
+                git branch: 'main', url: 'https://github.com/mukti-sharma-2001/SpringBootDemoEx'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -22,7 +22,7 @@ pipeline {
         stage('Compile') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mukti-sharma-2001/SpringBootDemoEx.git'
+                git branch: 'main', url: 'https://github.com/mukti-sharma-2001/SpringBootDemoEx'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -34,7 +34,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mukti-sharma-2001/SpringBootDemoEx.git'
+                git branch: 'main', url: 'https://github.com/mukti-sharma-2001/SpringBootDemoEx'
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 echo 'maven test'
@@ -45,7 +45,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mukti-sharma-2001/SpringBootDemoEx.git'
+                git branch: 'main', url: 'https://github.com/mukti-sharma-2001/SpringBootDemoEx'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
