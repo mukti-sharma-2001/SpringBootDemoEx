@@ -2,6 +2,7 @@ package com.example.SpringbootAppEx.entities;
 
 public class Employee {
 
+	
 	private int EmpId;
 	private String name;
 	private String address;
